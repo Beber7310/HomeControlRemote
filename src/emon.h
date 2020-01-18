@@ -9,5 +9,6 @@
 #define EMON_H_
 
 void emon_log_data(char* name, float value);
+int logData(char* dbtype,char* dbname,time_t date,float data);
 
 #endif /* EMON_H_ */

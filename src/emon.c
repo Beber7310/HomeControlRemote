@@ -27,6 +27,7 @@
 //
 
 
+
 void emon_log_data(char* name, float value)
 {
 	//if(fork()==0)
@@ -40,3 +41,11 @@ void emon_log_data(char* name, float value)
 }
 
 
+int logData(char* dbtype,char* dbname,time_t date,float data)
+{
+	char filename[256];
+
+	sprintf(filename,"%s_%s",dbname,dbtype);
+
+	emon_log_data(filename, data);
+}

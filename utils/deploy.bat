@@ -16,7 +16,7 @@ IF "%2"=="" (
 
 SET PUTTYSCP_BIN="C:\Program Files\PuTTY\pscp.exe"
 SET PUTTY_BIN="C:\Program Files (x86)\WinSCP\putty.exe"
-SET RASPBERRYPI_ADDR=homecontrol
+SET RASPBERRYPI_ADDR=homecontrolremote
 SET USERNAME=pi
 SET PASSWORD=q27krtrq
 SET CMD_FILENAME=commands.sh

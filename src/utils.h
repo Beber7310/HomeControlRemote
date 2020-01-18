@@ -21,8 +21,8 @@ int parse_http_thermostat_status(char* cmd);
 float parse_http_thermostat_target(char* cmd);
 int parse_http_cmd(char* cmd);
 int parse_http_cmd_token(char* cmd);
-int parse_http_cmd_RAD_token(char* cmd);
-int parse_http_cmd_LIGHT_token(char* cmd);
+int parse_http_cmd_FILP_token(char* cmd);
+
 float parse_http_temp(char* cmd);
 float parse_http_amp(char* cmd);
 int get_pgm_index(void);
@@ -36,5 +36,21 @@ typedef struct {
 	time_t 	date;
 
 } message_t;
+
+
+typedef struct {
+	float current;
+	float power;
+} power_t;
+
+#ifdef MAIN_CODE
+	#define EXT
+#else
+	#define EXT extern
+#endif
+
+EXT power_t			power;
+
+
 
 #endif /* UTILS_H_ */
